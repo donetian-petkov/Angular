@@ -1,0 +1,19 @@
+<!--
+<h1>Hello, {{title}}!</h1>
+
+<app-test></app-test>
+
+<app-example></app-example>
+-->
+
+<div>
+  HEADER
+</div>
+
+<div id="content">
+  <app-user-list [userArray]="users" (addUser)="addNewUserHandler($event)"></app-user-list>
+</div>
+
+<div>
+  FOOTER
+</div>
