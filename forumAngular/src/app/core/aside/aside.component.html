@@ -1,0 +1,13 @@
+<aside>
+  <div class="aside">
+    <h2 class="title">
+      {{title}}
+    </h2>
+    <div>
+      <div *ngIf="!items">Loading...</div>
+      <div *ngFor="let item of items" class="aside-theme">
+        <ng-container *ngTemplateOutlet="itemTemplateRef; context: { $implicit: item}"></ng-container>
+      </div>
+    </div>
+  </div>
+</aside>
