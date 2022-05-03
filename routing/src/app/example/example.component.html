@@ -1,0 +1,23 @@
+<p>{{count}}</p>
+
+<input [value]="count" [class]="inputTest">
+
+<button (click)="buttonClickHandler()">Click Me!</button>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{user.name}}
+  </li>
+</ul>
+
+<div *ngIf="showText" [class]="classes">VISIBLE</div>
+
+<button (click)="toggleText($event)">{{showText ? 'HIDE TEXT' : 'SHOW TEXT'}}</button>
+
+<input #inputElement type="text">
+
+<button (click)="changeTitleHandler(inputElement.value)">Change Title</button>
+
+<p>{{title}}</p>
+
+
