@@ -8,10 +8,12 @@ import {UserModule} from "./user/user.module";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {ThemeModule} from "./theme/theme.module";
 import {SharedModule} from "./shared/shared.module";
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

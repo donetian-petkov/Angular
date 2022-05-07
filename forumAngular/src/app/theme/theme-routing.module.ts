@@ -4,6 +4,7 @@ import {ThemeComponent} from "./theme/theme.component";
 import {NewThemeComponent} from "./new-theme/new-theme.component";
 import {ThemesComponent} from "./themes/themes.component";
 import {AuthActivate} from "../core/guards/auth.activate";
+import {NotFoundComponent} from "../not-found/not-found.component";
 
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
       authenticationRequired: true,
       authenticationFailureRedirectUrl: '/login'
     }
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ]
 
