@@ -1,0 +1,31 @@
+<form #form="ngForm" (ngSubmit)="loginHandler(form)">
+  <div class="form-group">
+    <label for="email" #highlight="highlight" [appHighlight]="true">Email: </label>
+    <input type="text" name="email" id="email" #emailInput="ngModel" [ngModel]="tesingEmail" required email>
+    <ul *ngIf="emailInput.invalid && emailInput.touched" class="errors">
+      <li *ngIf="emailInput.errors?.required">Email is Required</li>
+      <li *ngIf="emailInput.errors?.email">Email is Invalid</li>
+    </ul>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password" #passInput="ngModel" ngModel required [minlength]="6">
+    <ul *ngIf="passInput.invalid && passInput.touched" class="errors">
+      <li *ngIf="passInput.errors?.required">Password is Required</li>
+      <li *ngIf="passInput.errors?.minlength">Password should be minimum 6 characters</li>
+    </ul>
+  </div>
+
+  <div class="form-group">
+    <label for="repeat-password">Repeat Password: </label>
+    <input type="password" name="repeat-password" id="repeat-password" #repeatPassInput="ngModel" appSameValue="password" ngModel required [minlength]="6">
+    <ul *ngIf="repeatPassInput.invalid && repeatPassInput.touched" class="errors">
+      <li *ngIf="repeatPassInput.errors?.required">Password is Required</li>
+      <li *ngIf="repeatPassInput.errors?.minlength">Password should be minimum 6 characters</li>
+      <li *ngIf="repeatPassInput.errors?.sameValue">Password and repeatPassword should be the same</li>
+
+    </ul>
+  </div>
+  <button>Login</button>
+</form>
