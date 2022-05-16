@@ -7,6 +7,7 @@ import {ThemeRoutingModule} from "./theme-routing.module";
 import {AsideComponent} from "./aside/aside.component";
 import {SharedModule} from "../shared/shared.module";
 import {RouterModule} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -21,6 +22,7 @@ import {RouterModule} from "@angular/router";
     CommonModule,
     ThemeRoutingModule,
     SharedModule,
+    FormsModule,
     RouterModule
   ]
 })

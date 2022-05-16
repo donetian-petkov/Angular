@@ -6,6 +6,8 @@ import {RegisterComponent} from "./register/register.component";
 import {UserRoutingModule} from "./user-routing.module";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {UserService} from "./user.service";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {SharedModule} from "../shared/shared.module";
 
 
 
@@ -17,8 +19,11 @@ import {UserService} from "./user.service";
   ],
   imports: [
     CommonModule,
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
+    FontAwesomeModule,
     UserRoutingModule,
-    FontAwesomeModule
   ],
   providers: [
     UserService

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../../content.service";
+import {NgForm} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-new-theme',
@@ -7,7 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewThemeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contentService: ContentService,
+              private router: Router) { }
+
+
+  createTheme(form: NgForm): void {
+    if(form.invalid) {
+      return;
+    }
+    this.contentService.saveTheme(form.value).subscribe({
+      next: () => {
+        this.router.navigate(['/themes'])
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
 
   ngOnInit(): void {
   }

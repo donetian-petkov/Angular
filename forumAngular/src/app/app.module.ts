@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {ThemeModule} from "./theme/theme.module";
 import {SharedModule} from "./shared/shared.module";
 import { NotFoundComponent } from './not-found/not-found.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     CoreModule,
     SharedModule,
-    AppRoutingModule,
     UserModule,
     FontAwesomeModule,
-    ThemeModule
+    HttpClientModule,
+    ThemeModule,
+    AppRoutingModule,
   ],
   providers: [ContentService],
   bootstrap: [AppComponent]
