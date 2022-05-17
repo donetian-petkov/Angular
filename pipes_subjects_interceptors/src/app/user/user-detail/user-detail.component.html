@@ -1,0 +1,15 @@
+<!--
+<app-loader *ngIf="!user"></app-loader>
+<div>
+  {{user?.username}}
+  <button [routerLink]="['/user-detail/', user.id + 1]">Next User</button>
+</div>
+<button type="button" routerLink="/user-list">Back to User List</button>
+-->
+
+<div *ngIf="(user$ | async) as user">
+  <div>{{user.username}}</div>
+  <button type="button" [routerLink]="['/user-detail', user.id + 1]">Next User</button>
+</div>
+<app-loader *ngIf="(user$ | async)"></app-loader>
+<button type="button" routerLink="/user-list">Back to User List</button>
