@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ITheme} from "../../shared/interfaces";
-import {ContentService} from "../../content.service";
+import {ContentService} from "../../core/services/content.service";
 import {ActivatedRoute} from "@angular/router";
 /*import {ContentService} from "../content.service";
 import {ITheme} from "../shared/interfaces";*/

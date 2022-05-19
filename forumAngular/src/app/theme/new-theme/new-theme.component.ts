@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ContentService} from "../../content.service";
+import {ContentService} from "../../core/services/content.service";
 import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
 
@@ -20,7 +20,7 @@ export class NewThemeComponent implements OnInit {
     }
     this.contentService.saveTheme(form.value).subscribe({
       next: () => {
-        this.router.navigate(['/themes'])
+        this.router.navigate(['/theme'])
       },
       error: (err) => {
         console.log(err);

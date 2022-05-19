@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {faEnvelope, faLock} from '@fortawesome/free-solid-svg-icons';
-import {UserService} from "../user.service";
+import {UserService} from "../../core/services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgForm} from "@angular/forms";
 import {emailValidator} from '../../shared/validators'

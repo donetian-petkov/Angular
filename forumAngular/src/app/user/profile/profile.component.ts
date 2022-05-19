@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from "../user.service";
+import {UserService} from "../../core/services/user.service";
 import {NgForm} from "@angular/forms";
 
 @Component({
@@ -11,11 +11,19 @@ export class ProfileComponent implements OnInit {
 
   inUpdateMode = false;
 
+  isLoading = true;
+
   get user() {
     return this.userService.user;
   }
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {
+
+    this.userService.getProfileInfo().subscribe(user => {
+      this.isLoading = false;
+    })
+
+  }
 
   ngOnInit(): void {
   }

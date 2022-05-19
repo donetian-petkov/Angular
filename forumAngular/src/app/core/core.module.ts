@@ -6,6 +6,10 @@ import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
 import {LocalStorage} from "./injection-tokens";
 import {AuthActivate} from "./guards/auth.activate";
+import {appInterceptorProvider} from "./app-interceptor";
+import {globalErrorHandlerProvider} from "./error-handler";
+import {UserService} from "./services/user.service";
+import {ContentService} from "./services/content.service";
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import {AuthActivate} from "./guards/auth.activate";
     FooterComponent
   ],
   providers:[
+    appInterceptorProvider,
+    globalErrorHandlerProvider,
+    UserService,
+    ContentService,
     {
       provide: LocalStorage,
       useFactory: (platformId: Object) => {

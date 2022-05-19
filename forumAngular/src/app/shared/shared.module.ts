@@ -4,13 +4,17 @@ import {HomeComponent} from "./home/home.component";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {RouterModule} from "@angular/router";
 import { CustomValidatorDirective } from './custom-validator.directive';
+import { ShortenPipe } from './shorten.pipe';
+import { TimediffPipe } from './timediff.pipe';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CustomValidatorDirective
+    CustomValidatorDirective,
+    ShortenPipe,
+    TimediffPipe
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,9 @@ import { CustomValidatorDirective } from './custom-validator.directive';
   ],
   exports: [
     HomeComponent,
-    CustomValidatorDirective
+    CustomValidatorDirective,
+    ShortenPipe,
+    TimediffPipe
   ]
 })
 export class SharedModule { }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {faEnvelope, faLock, faPhone, faUser} from '@fortawesome/free-solid-svg-icons';
 import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
 import {emailValidator, sameValueAsFactory} from "../../shared/validators";
-import {UserService} from "../user.service";
+import {UserService} from "../../core/services/user.service";
 import {Router} from "@angular/router";
 
 

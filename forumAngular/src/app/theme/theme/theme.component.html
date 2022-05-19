@@ -6,7 +6,7 @@
       <div class="theme-name-wrapper">
         <div class="theme-name">
           <h2>{{theme.themeName}}</h2>
-          <p>Date: <time>{{theme.created_at}}</time></p>
+          <p>Date: <time>{{theme.created_at | timediff}}</time></p>
         </div>
         <div class="subscribers">
           <p>Subscribers: <span>{{theme.subscribers.length}}</span></p>

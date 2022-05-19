@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IPost, ITheme } from "../../shared/interfaces";
-import { ContentService } from "../../content.service";
-import { UserService } from "../../user/user.service";
+import { ContentService } from "../../core/services/content.service";
+import { UserService } from "../../core/services/user.service";
 import {Router} from "@angular/router";
 
 @Component({
