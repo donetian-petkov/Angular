@@ -1,0 +1,53 @@
+<!--
+<h1>Hello, {{title}}!</h1>
+
+<app-test></app-test>
+
+<app-example></app-example>
+-->
+
+<app-header></app-header>
+
+{{data | getProp: [0, 'test']}}
+
+<button (click)="addItem()">Add New Item</button>
+
+<div id="content">
+
+  <router-outlet></router-outlet>
+
+</div>
+
+<!--<button (click)="toggleActive()" [appHighlight]="isActive">Toggle Active</button>
+
+<ng-template #isActiveTemplate>
+  IS ACTIVE - TRUE
+</ng-template>
+
+<ng-template #isNotActiveTemplate>
+  IS ACTIVE - FALSE
+</ng-template>
+
+<ng-container *ngTemplateOutlet="isActive ? isActiveTemplate : isNotActiveTemplate"></ng-container>
+<br>
+<ng-container *ngIf="isActive; else isNotActiveTemplate">
+  IS ACTIVE - TRUE
+</ng-container>
+<br>
+<ng-container *appMyIf="isActive">
+  IS ACTIVE - This is TRUE
+</ng-container>
+<br>
+<ng-template [appMyIf]="isActive" let-data="data" let-test>
+  <ng-container>
+    {{data}}
+    {{test}}
+  </ng-container>
+</ng-template>
+<br>
+<ng-container *appMyIf="isActive; let data=data; let test2">
+  {{data}}
+  {{test2}}
+</ng-container>-->
+
+<app-footer></app-footer>
